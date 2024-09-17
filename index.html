@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="https://pannacollege.org/" target="_blank"
+        ><img src="./images/propertyValue.png" alt=""
+      /></a>
+      <a href="https://dhammadictionary.org/" target="_blank"
+        >DhammaDictionary</a
+      >
+      <a href="https://americanmonk.org/tipitaka-pali-reader/" target="_blank"
+        >TipitakaPaliReader</a
+      >
+      <a
+        href="https://www.digitalpalireader.online/_dprhtml/index.html"
+        target="_blank"
+        >DigitalPaliReader</a
+      >
+      <a href="https://www.vipassana.com/index-2.html" target="_blank"
+        >Vipassana</a
+      >
+    </header>
+
+    <div id="library-container" style="display: flex">
+      <!-- Book List (left pane) -->
+      <div id="bookList" style="padding: 10px; border-right: 1px solid #ccc">
+        <!-- Your book list content here -->
+      </div>
+      <!-- File Display (right pane) -->
+      <div id="fileDisplay" style="padding: 10px">
+        <iframe
+          id="fileFrame"
+          name="fileFrame"
+          style="width: 100%; height: 100%; border: none"
+        ></iframe>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with <span id="hearts">&hearts;</span> by PannaCollege, 2024.</p>
+      <a
+        href="https://apps.apple.com/us/app/tipitaka-pali/id1543874006"
+        target="_blank"
+        >တိပိဋက-app</a
+      >
+      <a href="https://www.accesstoinsight.org/" target="_blank"
+        >AccessToInsight</a
+      >
+      <a href="https://www.dhammadownload.com/index.htm" target="_blank"
+        >DhammaDownload</a
+      >
+      <a href="https://www.tipitaka.org/webapp" target="_blank"
+        >PaliTipitaka-app</a
+      >
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

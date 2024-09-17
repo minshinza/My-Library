@@ -1,0 +1,449 @@
+:root {
+  --primary-color: rgb(241, 241, 241);
+  --secondary-color: orange;
+  --tertiary-color: white;
+  --primary-bg-color: rgba(241, 241, 241, 0.508);
+  --secondary-bg-color: rgb(58, 147, 206);
+  --tertiary-bg-color: rgb(169, 65, 65);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer p {
+  font-size: 1.2rem;
+  color: yellowgreen;
+}
+img {
+  width: 65px;
+}
+
+#hearts {
+  color: rgb(255, 187, 0);
+  font-size: 1.3rem;
+}
+
+#library-container {
+  display: flex;
+  background-color: var(--primary-color);
+  height: auto;
+}
+
+#bookList {
+  width: 350px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  background-color: var(--primary-bg-color);
+}
+
+#fileDisplay {
+  width: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  /* background-color: rgba(241, 241, 241, 0.705); */
+}
+
+/* Adjust the iframe size to fit the remaining space */
+#iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.folder-list,
+.file-list {
+  margin-left: 20px;
+}
+
+.book,
+.folder,
+.file {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.file-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--tertiary-bg-color);
+  color: var(--tertiary-color);
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+  cursor: pointer;
+}
+
+/* Navbar Styles */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--secondary-bg-color);
+  align-items: center;
+  padding: 10px;
+  height: 12vh;
+}
+
+header li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* All Sub-pages */
+.section {
+  margin-bottom: 20px;
+  padding: 15px;
+  /* background-color: #eef9e9; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.center {
+  text-align: center;
+  margin: 5% 0;
+}
+.center span {
+  font-size: 2.5rem;
+}
+
+.heading {
+  box-shadow: 0px 1px 1px rgb(103, 97, 82);
+  padding: 10px;
+  text-align: center;
+  color: rgb(230, 3, 230);
+  font-size: 2.2rem;
+  border-radius: 7px;
+  /* background-color: beige; */
+  width: 90%;
+  margin: 10px auto;
+}
+
+.heading-2 {
+  box-shadow: 0px 1px 1px rgb(103, 97, 82);
+  padding: 10px;
+  text-align: center;
+  color: rgba(5, 5, 5, 0.947);
+  font-size: 2.2rem;
+  border-radius: 7px;
+  /* background-color: beige; */
+  width: 90%;
+  margin: 10px auto;
+}
+.intro {
+  font-size: 1.5rem;
+  width: 90%;
+  margin: 10px auto;
+}
+
+/* Tooltips */
+.tikamatika span {
+  margin-left: 5%;
+  font-size: 1.5rem;
+  color: cadetblue;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  /* border-bottom: 1px dotted rgb(218, 191, 35); Add dotted underline */
+  /* color: maroon; Set color for tooltip text */
+  /* cursor: help; Change cursor to indicate tooltip */
+  &:hover {
+    color: olive;
+    /* border-radius: 8px; */
+    /* width: max-content; */
+    /* padding: 1px; */
+    /* box-sizing: border-box; */
+  }
+}
+
+p.tooltip {
+  margin: 10px 0;
+  padding: 5px;
+  border-bottom: 1px dotted #000;
+  cursor: help;
+  display: inline-block;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip); /* Use the content attribute for tooltip text */
+  /* display: none; */
+  position: absolute;
+  background-color: antiquewhite;
+  color: #000;
+  padding: 5px;
+  border-radius: 4px 12px;
+  /* border: 1px solid #ccc; */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+  white-space: nowrap; /* Prevents tooltip text from wrapping */
+  font-size: 12px;
+  left: 50%; /* Center the tooltip horizontally */
+  transform: translateX(-50%); /* Adjust for center alignment */
+  bottom: calc(100%); /* Position just above the .tooltip element */
+  /* bottom: calc(100% + 5px);  */
+  /* bottom: 120%;  Position above the text with more space */
+}
+
+.tooltip:hover::after {
+  /* display: block; Show tooltip on hover */
+  opacity: 1;
+  visibility: visible;
+}
+
+p.tooltip::after {
+  content: attr(data-tooltip);
+  visibility: hidden;
+  opacity: 0;
+  width: auto;
+  background-color: rgba(145, 112, 93, 0.913);
+  color: #faf7f7;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 5px;
+  transition: opacity 0.3s ease;
+}
+p.tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.justHover {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: rgb(231, 231, 201);
+  color: rgb(196, 3, 196);
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 70%; /* Position the tooltip above the text */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap; /* Prevents the tooltip from wrapping text */
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+#pTag {
+  display: block !important;
+  line-height: 2.5;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  margin: 3% 0% 3% 20%;
+}
+
+.mentalState {
+  background-color: rgb(210, 210, 208);
+  padding: 10px 20px;
+  border-radius: 7px;
+  margin-bottom: 0.3px;
+}
+.mentalState > h2 {
+  color: maroon;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #eef9e9;
+  padding: 7px;
+}
+.mentalState > h3 {
+  color: rgb(5, 100, 215);
+  font-size: 1.1rem;
+  border-left: 1px solid rgb(5, 100, 215);
+  padding: 7px;
+  margin: 2% auto;
+}
+.superscript {
+  vertical-align: super;
+  font-size: 0.75em; /* Adjusts the font size to be smaller */
+  color: #777;
+}
+.chapter {
+  margin: 3% auto;
+}
+
+/* Two Columns */
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5%;
+}
+
+.column {
+  width: 49%; /* Adjust as needed */
+  margin: 10px auto;
+  font-size: 1.5rem;
+}
+
+.column h3 {
+  color: green;
+  font-size: 2rem;
+  /* margin-top: 12px; */
+  margin: 5px 10px;
+}
+.column p {
+  font-size: 1.5rem;
+  margin: 5px 10px;
+}
+
+.three-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5%;
+}
+
+.column {
+  width: 33%; /* Adjust as needed */
+}
+
+/* All About Notes */
+.easyNote {
+  border-left: 2px solid green;
+  padding: 10px 12px;
+  box-shadow: 0px 1px 1px #777;
+  background-color: #fff;
+  border-radius: 9px;
+
+  &::before {
+    /* content: '[ ဆောင်ပုဒ် ]'; */
+    color: green;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+}
+
+.nerdNote {
+  border-left: 2px solid rgb(222, 146, 4);
+  padding: 10px 12px;
+  box-shadow: 0px 1px 1px rgb(136, 89, 4);
+  background-color: rgba(220, 245, 246, 0.797);
+  border-radius: 9px;
+
+  &::before {
+    /* content: '[ ဂိုဏ်းဝင်ပုဒ်များ ]'; */
+    color: goldenrod;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+}
+
+.welcome-intro h2 {
+  text-align: center;
+  color: blue;
+  font-size: 1.7rem;
+}
+.welcome-intro p {
+  color: darkgreen;
+  font-size: 1.3rem;
+}
+.welcome-intro ul {
+  color: rgb(59, 103, 205);
+  font-size: 1.2rem;
+}
+.importantNote {
+  /* border-left: 2px solid rgb(219, 23, 1); */
+  padding: 10px 12px;
+  box-shadow: 0px 1px 1px rgb(136, 89, 4);
+  /* background-color: rgba(240, 246, 200, 0.797); */
+  border-radius: 4px;
+  margin: 4% auto;
+
+  &::before {
+    /* content: '[ မှတ်ချက် ]'; */
+    color: rgb(186, 28, 4);
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+}
+.importantNote ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.easyNote > h3,
+.nerdNote > h3,
+.importantNote > h3 {
+  color: rgb(5, 100, 215);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
