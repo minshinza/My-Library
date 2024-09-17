@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
       Readings: ["lesson.html", "recording.html", "quiz.html"],
       Vinaya: ["lesson.html", "recording.html"]
     },
-    သီလက္ခန်: {
-      book2a: ["lesson.html", "recording.html", "quiz.html"],
-      book2b: ["lesson.html", "recording.html", "quiz.html"],
-    },
     ပထမဆင့်: {
       Grammar: ["lesson.html", "recording.html", "quiz.html"],
       Sangaha: ["သင်္ဂြိုဟ်.html", "ညဝါ.html", "recording.html", "quiz.html"],
@@ -30,9 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "05-CSS-Positioning.html",
         "06-Git-Guide.html",
         "07-Challenge.html",
-        "08-Module-Project.html",
-        "09-Recordings.html",
-        "10-Quiz.html",
+        "08-Module-Project.html"
       ],
       M02_Advanced_CSS: [
         "01-HTML.html",
