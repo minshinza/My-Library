@@ -1,19 +1,29 @@
-.section {
+.section  {
     background-color: lemonchiffon;
+
 }
 
 .headers {
     color: darkblue;
+
 }
 
 #email {
     background-color: goldenrod;
+
 }
 
 #github {
-    background-color: lightsteelblue
+    background-color: lightsteelblue;
 }
 
-#portfolio {
+#protfolio{
     background-color: darkorange;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    padding-right: 1500;
+    padding-top: 150;
 }
