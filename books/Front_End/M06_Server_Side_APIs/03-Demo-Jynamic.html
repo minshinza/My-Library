@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/03-Demo-Jynamic.css">
+        <title>Dynamically Genrate Elements</title>
+    </head>
+    <body class="min-100-vh flex-column">
+        <header class="p-5 text-center text-white bg-primary">
+            <h1>Server-Side APIs</h1>
+        </header>
+        <main class="flex-row justify-center align-center col-auto p-4 bg-light">
+            <section class="card card-rounder col-7 bg-white">
+                <header class="card-header text-center">
+                    <h2 class="text-white">Dynamically Generated Elements</h2>
+                </header>
+                <div class="text-center p-4">
+                    <p class="card-body">Generated dynamic HTML to display the github user's login and URL of their github profile.</p>
+                    <button class="btn btn-danger" id="fetch-button">Click Me</button>
+                </div>
+                <div class="flex-column" id="user"></div>
+            </section>
+        </main>
+    </body>
+    <script src="./assets/js/03-Demo-Jynamic.js"></script>
+</html>
+

@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d182b;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(129 133 254);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(155, 147, 42, 0.1);
+}
+
+#weatherResults, #forecastResults {
+    margin-top: 20px;
+}
+
+#history li {
+    cursor: pointer;
+    color: rgb(7, 1, 5);
+    text-decoration: underline;
+}
+h1,
+h3 {
+    color: aqua;
+}

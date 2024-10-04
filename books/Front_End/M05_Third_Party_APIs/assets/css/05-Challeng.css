@@ -1,0 +1,46 @@
+.timeblock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.hour {
+  flex: 0 0 10%;
+  text-align: center;
+  padding: 10px;
+  background-color: #d3d3d3;
+  border: 1px solid #ccc;
+}
+
+.description {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.past {
+  background-color: #f0f0f0;
+}
+
+.present {
+  background-color: #ff6961;
+}
+
+.future {
+  background-color: #77dd77;
+}
+
+.saveBtn {
+  flex: 0 0 10%;
+  text-align: center;
+  padding: 10px;
+  background-color: #06aed5;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  color: #fff;
+}
+
+.saveBtn:hover {
+  background-color: #045d8d;
+}
